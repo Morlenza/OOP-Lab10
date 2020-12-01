@@ -100,11 +100,7 @@ public class ConcurrentGUI extends JFrame {
                      * Event-Dispatch Thread (EDT)!
                      */
                     SwingUtilities.invokeAndWait(() -> ConcurrentGUI.this.display.setText(Integer.toString(Agent.this.counter)));
-                    if (up) {
-                        this.counter++;
-                    } else {
-                        this.counter--;
-                    }
+                    counter = up ? counter + 1 : counter - 1;
                     Thread.sleep(100);
                 } catch (InvocationTargetException | InterruptedException ex) {
                     /*
