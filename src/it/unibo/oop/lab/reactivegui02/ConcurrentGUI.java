@@ -68,6 +68,10 @@ public class ConcurrentGUI extends JFrame {
         down.addActionListener(e -> agent.up = false);
     }
 
+    public void stopFunctionButton() {
+        this.stop.doClick();
+    }
+
     /*
      * The counter agent is implemented as a nested class. This makes it
      * invisible outside and encapsulated.
